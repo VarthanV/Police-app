@@ -1,0 +1,20 @@
+{% extends "policeapp/base.html" %}
+
+{% block content %}
+<div class="container mt-5 text-center">
+    {% for police in polices%}
+    <div class="card">
+        <div class="card-body">
+         <p> Name : {{police.name}}</p>
+         <p> Age : {{police.age}}</p>
+         <p> Department : {{police.department}}</p>
+         <p> Station : {{police.station}}</p>
+        </div>
+        <div class="text-right">
+            <a class="btn btn-danger" href="{% url 'delete' police.pk %}"> Delete</a>
+        </div>
+      </div>
+      {% endfor %}
+
+</div>
+{% endblock %}

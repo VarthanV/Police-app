@@ -1,0 +1,10 @@
+{% extends 'policeapp/base.html' %}
+
+{% block content%}
+<div class="container text-center mt-5 ">
+    <a class="btn btn-primary" href="{% url 'view' %}"> View Data</a>
+    <a class="btn btn-danger" href="{% url 'add' %}"> Add Data</a>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "policeapp/base.html" %}
+{% block content %}
+<div class="container">
+<form method="POST" action="{% url 'add' %}">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="exampleInputEmail1">Name </label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Age </label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Age" name="age">
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">Department </label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Department" name="department">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Department </label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Station" name="station">
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+  </form>
+
+{% endblock %}
