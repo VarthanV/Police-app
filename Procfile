@@ -1,0 +1,1 @@
+web: gunicorn police.wsgi --log-file -
